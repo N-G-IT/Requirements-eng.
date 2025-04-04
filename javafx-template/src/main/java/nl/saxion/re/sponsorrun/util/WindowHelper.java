@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Control;
 import javafx.stage.Stage;
-import nl.saxion.re.sponsorrun.SponsorRunApp;
+import nl.saxion.re.sponsorrun.ToernooiApp;
 
 public class WindowHelper {
 
@@ -30,7 +30,7 @@ public class WindowHelper {
      */
     public static void openWindow(String fxmlResource, String title, int width, int height, Stage stage) {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(SponsorRunApp.class.getResource(fxmlResource));
+        FXMLLoader fxmlLoader = new FXMLLoader(ToernooiApp.class.getResource(fxmlResource));
         try {
 
             var scene = new Scene(fxmlLoader.load(), width, height);
