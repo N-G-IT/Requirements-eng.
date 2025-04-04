@@ -9,11 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import nl.saxion.re.sponsorrun.util.WindowHelper;
 
+
 import java.io.IOException;
+import java.util.Objects;
 
 public class RequirementsController {
 
@@ -46,11 +49,15 @@ public class RequirementsController {
 
 
     public void switchToMainMenu(ActionEvent event) throws IOException {
+        if (!Objects.equals(Username.getText(), "Simon")) {
+            Username.setStyle("-fx-border-color: red;");
+            Username.setPromptText("Voeg een email adres in");
+            boolean valid = false;
+        }else {
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        WindowHelper.openWindow("Main-menu.fxml", "StatScherm", 600, 500, stage);
-
+            WindowHelper.openWindow("Main-menu.fxml", "StatScherm", 600, 500, stage);
+        }
     }
 
     public void switchToScoreScreen(ActionEvent event) throws IOException {
@@ -93,7 +100,10 @@ public class RequirementsController {
 
     }
 
+    @FXML
+    private TextField Username;
 
+    
 
 
 
