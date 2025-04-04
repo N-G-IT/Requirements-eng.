@@ -1,10 +1,15 @@
 package nl.saxion.re.sponsorrun;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
+import nl.saxion.re.sponsorrun.data.Data;
+import nl.saxion.re.sponsorrun.util.WindowHelper;
 
 import java.io.IOException;
 
@@ -16,17 +21,50 @@ public class ToernooiApp extends Application {
         //Data.updateFromDisk();
 
         // start the main menu window
-        //WindowHelper.openWindow("Login-screen.fxml", "Sponsor Run App", 320, 240, stage);
+        WindowHelper.openWindow("Login-screen.fxml", "ToernooiApp", 600, 500, stage);
 
-        //Login-screen.fxml
 
-        Parent root = FXMLLoader.load(getClass().getResource("Login-screen.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+
+        //System.out.println(getClass().getResource("Main-menu.fxml"));
+        //System.out.println(getClass().getResource("Login-screen.fxml"));
+
+        //Parent root = FXMLLoader.load(getClass().getResource("Main-menu.fxml"));
+        //Scene scene = new Scene(root);
+        //stage.setScene(scene);
+        //stage.show();
+
+        stage.setOnCloseRequest(event -> {
+
+            event.consume();
+
+            logUit(stage);
+        });
     }
+
+
+
+
+    public void logUit(Stage stage){
+
+        Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Log uit");
+        alert.setHeaderText("Je logt zo uit!");
+        alert.setContentText("Do you want to save before exiting?: ");
+        if(alert.showAndWait().get() == ButtonType.OK) {
+
+            System.out.println("Je bent uitgelogt");
+            stage.close();
+        }
+    }
+
 
     public static void main(String[] args) {
         launch();
     }
 }
+
+
+
+
+
