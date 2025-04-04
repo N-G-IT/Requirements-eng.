@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane onDragDetected="#switchToMainMenu" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.RequirementsController">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back" />
+      <Button layoutX="107.0" layoutY="109.0" mnemonicParsing="false" text="Match-ups">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="348.0" layoutY="109.0" mnemonicParsing="false" text="Tijdindeling">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="145.0" layoutY="220.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="310.0" text="scheidsrechter toevoegen">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="254.0" layoutY="27.0" text="Inleiding">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

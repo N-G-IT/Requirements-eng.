@@ -53,6 +53,40 @@ public class RequirementsController {
 
     }
 
+    public void switchToScoreScreen(ActionEvent event) throws IOException {
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        WindowHelper.openWindow("Score-screen.fxml", "ScoreScreen", 600, 500, stage);
+
+    }
+
+    public void switchToTeamScreen(ActionEvent event) throws IOException {
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        WindowHelper.openWindow("Team-screen.fxml", "TeamScreen", 600, 500, stage);
+
+    }
+
+    public void switchToIndelingScreen(ActionEvent event) throws IOException {
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        WindowHelper.openWindow("Indeling-screen.fxml", "IndelingScreen", 600, 500, stage);
+
+    }
+
+
+    public void switchToResultatenScreen(ActionEvent event) throws IOException {
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        WindowHelper.openWindow("Resultaten-screen.fxml", "ResultatenScreen", 600, 500, stage);
+
+    }
+
+
     public void switchToLoginScreen(ActionEvent event) throws IOException {
 
         WindowHelper.openWindow("Login-screen.fxml", "ToernooiApp", 600, 500, stage);
