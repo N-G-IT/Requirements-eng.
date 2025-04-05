@@ -129,9 +129,9 @@ public class RequirementsController {
     public void logUit(ActionEvent event){
 
         Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("You're about to logout!");
-        alert.setContentText("Do you want to save before exiting?: ");
+        alert.setTitle("Log-uit");
+        alert.setHeaderText("je logt bijna uit!");
+        alert.setContentText("Wil je opslaan voordat de uit-logt?: ");
         if(alert.showAndWait().get() == ButtonType.OK) {
 
 

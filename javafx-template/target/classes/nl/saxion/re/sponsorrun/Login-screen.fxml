@@ -8,12 +8,12 @@
    <children>
       <Button layoutX="274.0" layoutY="291.0" mnemonicParsing="false" onAction="#LoginRequirements" text="Login" />
       <PasswordField fx:id="Password" layoutX="223.0" layoutY="188.0" />
-      <Label layoutX="223.0" layoutY="109.0" text="Username">
+      <Label layoutX="223.0" layoutY="109.0" text="Gebruikersnaam">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="225.0" layoutY="168.0" text="Password">
+      <Label layoutX="225.0" layoutY="168.0" text="Wachtwoord">
          <font>
             <Font size="14.0" />
          </font>
