@@ -49,9 +49,19 @@ public class RequirementsController {
 
 
     public void switchToMainMenu(ActionEvent event) throws IOException {
-        if (!Objects.equals(Username.getText(), "Simon")) {
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            WindowHelper.openWindow("Main-menu.fxml", "StatScherm", 600, 500, stage);
+
+    }
+
+
+    public void LoginRequirements(ActionEvent event) throws IOException {
+        if (!Objects.equals(Username.getText(), "Simon") & !Objects.equals(Password.getText(), "school")) {
             Username.setStyle("-fx-border-color: red;");
-            Username.setPromptText("Voeg een email adres in");
+            Password.setStyle("-fx-border-color: red;");
+            //Username.setPromptText("Voeg een email adres in");
             boolean valid = false;
         }else {
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -59,6 +69,9 @@ public class RequirementsController {
             WindowHelper.openWindow("Main-menu.fxml", "StatScherm", 600, 500, stage);
         }
     }
+
+
+
 
     public void switchToScoreScreen(ActionEvent event) throws IOException {
 
@@ -103,7 +116,8 @@ public class RequirementsController {
     @FXML
     private TextField Username;
 
-    
+    @FXML
+    private TextField Password;
 
 
 
