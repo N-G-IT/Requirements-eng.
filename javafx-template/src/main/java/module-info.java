@@ -4,6 +4,7 @@ module nl.saxion.re.sponsorrun {
     requires opencsv;
 
     requires org.controlsfx.controls;
+    requires SaxionApp;
 
     opens nl.saxion.re.sponsorrun to javafx.fxml;
     exports nl.saxion.re.sponsorrun;

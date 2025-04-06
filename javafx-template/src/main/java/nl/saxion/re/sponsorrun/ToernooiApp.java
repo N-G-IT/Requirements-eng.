@@ -10,8 +10,9 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import nl.saxion.re.sponsorrun.data.Data;
 import nl.saxion.re.sponsorrun.util.WindowHelper;
-
+import nl.saxion.app.SaxionApp;
 import java.io.IOException;
+import java.util.Objects;
 
 public class ToernooiApp extends Application {
     @Override
@@ -22,6 +23,7 @@ public class ToernooiApp extends Application {
 
         // start the main menu window
         WindowHelper.openWindow("Login-screen.fxml", "ToernooiApp", 600, 500, stage);
+        //FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/nl/saxion/re/sponsorrun/Login-screen.fxml")));
 
 
 
