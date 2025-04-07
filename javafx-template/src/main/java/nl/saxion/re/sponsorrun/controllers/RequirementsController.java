@@ -33,29 +33,6 @@ public class RequirementsController implements Initializable {
     private Parent root;
 
 
-
-
-//-----------------------------------------------------------------------------
-//    public void switchToMainMenu(ActionEvent event) throws IOException {
-//        root = FXMLLoader.load(getClass().getResource("Main-menu.fxml"));
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//
-//    }
-
-//    public void switchToLoginScreen(ActionEvent event) throws IOException {
-//        root = FXMLLoader.load(getClass().getResource("Login-screen.fxml"));
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//
-//    }
-//-------------------------------------------------------------------------------
-
-
     public void switchToMainMenu(ActionEvent event) throws IOException {
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -206,16 +183,7 @@ public class RequirementsController implements Initializable {
         }
     }
 
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        System.out.println("Sport1 = " + Sport1);
-//
-//        Sport1.setCellValueFactory(new PropertyValueFactory<>("sport")); // let op: "sport", niet "Sport1"
-//        Team.setCellValueFactory(new PropertyValueFactory<>("team"));
-//        Jaar.setCellValueFactory(new PropertyValueFactory<>("jaar"));
-//
-//        table.setItems(initialData());
-//    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

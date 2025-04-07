@@ -18,23 +18,12 @@ public class ToernooiApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        // read all data from disk
-        //Data.updateFromDisk();
+        //Gebruikersnaam = Simon  || hoofdletter gevoelig
+        //Wachtwoord     = school || hoofdletter gevoelig
 
         // start the main menu window
         WindowHelper.openWindow("Login-screen.fxml", "ToernooiApp", 600, 500, stage);
-        //FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/nl/saxion/re/sponsorrun/Login-screen.fxml")));
 
-
-
-
-        //System.out.println(getClass().getResource("Main-menu.fxml"));
-        //System.out.println(getClass().getResource("Login-screen.fxml"));
-
-        //Parent root = FXMLLoader.load(getClass().getResource("Main-menu.fxml"));
-        //Scene scene = new Scene(root);
-        //stage.setScene(scene);
-        //stage.show();
 
         stage.setOnCloseRequest(event -> {
 
